@@ -7,6 +7,7 @@ console.log(rectangle.length);
 console.log(rectangle.breadth);
 
 
+//* Factory Function
 function createCar(name,color,wheel,seat,price){
     return carObj = {
         color,
@@ -35,3 +36,21 @@ function createCar(name,color,wheel,seat,price){
 
 let car1 = createCar("BMW","Mate Black",4,2,1000000);
 let car2 = createCar("Lamborghini","Black",4,2,10000000);
+
+//* Constructor Function
+//* Pascal Notation
+
+function Rectangle(length,breadth){
+    this.length=length,
+    this.breadth = breadth,
+    this.draw= function(){
+        console.log(this.length," ",this.breadth);
+    }
+}
+
+let rect1 = new Rectangle(3,4);
+console.log(rect1);
+
+let rect2 = new Rectangle(5,6);
+console.log(rect2);
+
