@@ -54,3 +54,18 @@ console.log(rect1);
 let rect2 = new Rectangle(5,6);
 console.log(rect2);
 
+//* Default Object of constructor
+let rect = new Function('length','breadth',`
+    this.length=length,
+    this.breadth = breadth,
+    this.draw= function(){
+        console.log(this.length," ",this.breadth);
+    }
+    `)
+ let rect3 = new rect(2,3);
+
+ console.log(rect3);
+ console.log(rect3.length);
+ console.log(rect3.breadth);
+ console.log(rect3.draw);
+ console.log(rect3.draw());
