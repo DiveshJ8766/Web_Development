@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tables</title>
+    <!-- Style the table -->
+    <style>
+      table,
+      td,
+      th {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+
+      caption {
+        caption-side: bottom;
+      }
+
+      td {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- table of savings -->
+    <table>
+      <!-- caption -->
+      <caption>
+        Monthly savings
+      </caption>
+
+      <!-- table header -->
+      <thead>
+        <tr>
+          <!-- table header th -->
+          <th>Monthly</th>
+          <th>savings</th>
+        </tr>
+      </thead>
+      <!-- table body -->
+      <tbody>
+        <tr>
+          <td>January</td>
+          <td>2000</td>
+        </tr>
+        <tr>
+          <td>Feburary</td>
+          <td>5000</td>
+        </tr>
+        <tr>
+          <td>March</td>
+          <td>8000</td>
+        </tr>
+      </tbody>
+      <!-- table footer -->
+      <tfoot>
+        <tr>
+          <td>Total</td>
+          <td>15000</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <br />
+    <br />
+    <br />
+
+    <!-- Excersice Of Table -->
+    <table>
+      <thead>
+        <tr>
+          <td colspan="2">Welcome to Codehelp</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><label for="username">Username : </label></td>
+          <td><input type="text" id="username" /></td>
+        </tr>
+        <tr>
+          <td><label for="password">Password : </label></td>
+          <td><input type="password" id="password" /></td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="2"><button>Login</button></td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <!-- Exercise -->
+    <h1>Welcome to thecodehelp</h1>
+    <form action="https://www.thecodehelp.in">
+      <table>
+        <tr>
+          <td><label for="username">Username : </label></td>
+          <td><input type="text" id="username" /></td>
+        </tr>
+        <tr>
+          <td><label for="password">Password : </label></td>
+          <td><input type="password" id="password" /></td>
+        </tr>
+      </table>
+      <br />
+      <input type="submit" value="Login" />
+    </form>
+  </body>
+</html>
