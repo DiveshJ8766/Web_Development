@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rowspan and Colspan</title>
+    <style>
+      table,
+      td,
+      th {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+
+      caption {
+        caption-side: bottom;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption>
+        Fruits
+      </caption>
+      <tr>
+        <td>Apple</td>
+        <td>Orange</td>
+        <td>Jerry</td>
+      </tr>
+      <tr>
+        <td>Mango</td>
+        <td rowspan="3">Graphes</td>
+        <td>Pineapple</td>
+      </tr>
+      <tr>
+        <td>Blueberry</td>
+        <!-- <td>Plum</td> -->
+        <td>Papaya</td>
+      </tr>
+      <tr>
+        <td>Grapefruit</td>
+        <!-- <td>Apricot</td> -->
+        <td>Figs</td>
+      </tr>
+      <tr>
+        <td>Banana</td>
+        <td>Strawberry</td>
+        <td>Avocado</td>
+      </tr>
+    </table>
+
+    <br /><br /><br />
+
+    <table>
+      <caption>
+        Fruits
+      </caption>
+      <tr>
+        <td>Apple</td>
+        <td>Orange</td>
+        <td>Jerry</td>
+      </tr>
+      <tr>
+        <td>Mango</td>
+        <td>Graphes</td>
+        <td>Pineapple</td>
+      </tr>
+      <tr>
+        <td>Blueberry</td>
+        <td>Plum</td>
+        <td>Papaya</td>
+      </tr>
+      <tr>
+        <td>Grapefruit</td>
+        <td colspan="2" rowspan="2">Apricot</td>
+        <!-- <td>Figs</td> -->
+      </tr>
+      <tr>
+        <td>Banana</td>
+        <!-- <td>Strawberry</td> -->
+        <!-- <td>Avocado</td> -->
+      </tr>
+    </table>
+  </body>
+</html>
