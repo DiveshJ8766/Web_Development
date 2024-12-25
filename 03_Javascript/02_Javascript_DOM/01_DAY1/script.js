@@ -36,3 +36,39 @@ console.log("Query Selector ALL With Class : ",a);
 
 a = document.querySelectorAll('span');
 console.log("Query Selector All With Span : ",a);
+
+
+//* Inner HTML;
+//* get inner HTML
+let parent = document.getElementById('inner-html');
+console.log("Inner HTML : ",parent.innerHTML);
+let child = `
+        <p class="paragraph-style">
+            this is the paragraph
+            <span>this is the span text</span>
+        </p>`;
+
+//* set inner HTML
+// parent.innerHTML = child;
+console.log("Parent New HTML : ",parent.innerHTML);
+
+//* delete inner html
+// parent.innerHTML = "";
+
+//* Inner Text
+parent = document.querySelector('#inner-html');
+console.log("Inner Text : \n",parent.innerText);
+
+// parent.innerText = "<h2>HEy DIVESH</h2>";
+console.log("Inner Text : ",parent.innerText);
+
+
+//* Outer HTML
+console.log("Outer HTML : ",parent.outerHTML);
+
+// parent.outerHTML = "<h2>HEy DIVESH</h2>";
+console.log("Outer Text : ",parent.outerHTML);
+
+
+//* TextContent
+console.log("Text Content : ",parent.textContent);
