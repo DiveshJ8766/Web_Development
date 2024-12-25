@@ -129,3 +129,11 @@ p3.textContent = "hello this is paragraphy after end"
 element.insertAdjacentElement('afterend',p3);
 
 console.log(element.outerHTML);
+
+//* Remove Child
+element.removeChild(p2);
+
+let para1 = p3.parentElement;
+console.log("Parent : ",para1);
+
+para1.removeChild(p3);
