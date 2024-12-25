@@ -1,0 +1,23 @@
+marker{
+    background-color: lightblue;
+    color: black;
+    display: flex;
+    flex-direction: column;
+}
+
+#para-style{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.span-class{
+    color: red;
+}
+
+
+#para-style1{
+color: brown;
+}
+
+#para-style2{
+    color: green;
+}
