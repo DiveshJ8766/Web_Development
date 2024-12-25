@@ -9,39 +9,39 @@ window.console.log("Welcome to the Javascript DOM Class")
 
 //* Accesing the Element
 let idSelector = document.getElementById('para-style');
-console.log("ID Selector : ",idSelector);
+console.log("ID Selector : ", idSelector);
 
 let classSelector = document.getElementsByClassName('span-class');
-console.log("Class Selector : ",classSelector);
+console.log("Class Selector : ", classSelector);
 
 let tagSelector = document.getElementsByTagName('span');
-console.log("Tag Selector : ",tagSelector);
+console.log("Tag Selector : ", tagSelector);
 
 //* Query Selector
 let a = document.querySelector('#para-style');
-console.log("Id QuerySelector : ",a);
+console.log("Id QuerySelector : ", a);
 
 a = document.querySelector('.span-class');
-console.log("Query Class Selector : ",a);
+console.log("Query Class Selector : ", a);
 
 a = document.querySelector('span');
-console.log("Query Tag Selector : ",a);
+console.log("Query Tag Selector : ", a);
 
 //* Query Selector ALL
 a = document.querySelectorAll('#para-style');
-console.log("Query Selector ALL With ID : ",a);
+console.log("Query Selector ALL With ID : ", a);
 
 a = document.querySelectorAll('.span-class');
-console.log("Query Selector ALL With Class : ",a);
+console.log("Query Selector ALL With Class : ", a);
 
 a = document.querySelectorAll('span');
-console.log("Query Selector All With Span : ",a);
+console.log("Query Selector All With Span : ", a);
 
 
 //* Inner HTML;
 //* get inner HTML
 let parent = document.getElementById('inner-html');
-console.log("Inner HTML : ",parent.innerHTML);
+console.log("Inner HTML : ", parent.innerHTML);
 let child = `
         <p class="paragraph-style">
             this is the paragraph
@@ -50,28 +50,28 @@ let child = `
 
 //* set inner HTML
 // parent.innerHTML = child;
-console.log("Parent New HTML : ",parent.innerHTML);
+console.log("Parent New HTML : ", parent.innerHTML);
 
 //* delete inner html
 // parent.innerHTML = "";
 
 //* Inner Text
 parent = document.querySelector('#inner-html');
-console.log("Inner Text : \n",parent.innerText);
+console.log("Inner Text : \n", parent.innerText);
 
 // parent.innerText = "<h2>HEy DIVESH</h2>";
-console.log("Inner Text : ",parent.innerText);
+console.log("Inner Text : ", parent.innerText);
 
 
 //* Outer HTML
-console.log("Outer HTML : ",parent.outerHTML);
+console.log("Outer HTML : ", parent.outerHTML);
 
 // parent.outerHTML = "<h2>HEy DIVESH</h2>";
-console.log("Outer Text : ",parent.outerHTML);
+console.log("Outer Text : ", parent.outerHTML);
 
 
 //* TextContent
-console.log("Text Content : ",parent.textContent);
+console.log("Text Content : ", parent.textContent);
 
 //* Creating a Element
 let newElement = document.createElement('div');
@@ -108,25 +108,25 @@ document.body.appendChild(element);
 
 let p = document.createElement('p');
 p.textContent = "hello this is paragraphy before begin";
-element.insertAdjacentElement('beforebegin',p);
+element.insertAdjacentElement('beforebegin', p);
 
 console.log(element.outerHTML);
 
 let p1 = document.createElement('p');
 p1.textContent = "hello this is paragraphy after begin"
-element.insertAdjacentElement('afterbegin',p1);
+element.insertAdjacentElement('afterbegin', p1);
 
 console.log(element.outerHTML);
 
 let p2 = document.createElement('p');
 p2.textContent = "hello this is paragraphy before end"
-element.insertAdjacentElement('beforeend',p2);
+element.insertAdjacentElement('beforeend', p2);
 
 console.log(element.outerHTML);
 
 let p3 = document.createElement('p');
 p3.textContent = "hello this is paragraphy after end"
-element.insertAdjacentElement('afterend',p3);
+element.insertAdjacentElement('afterend', p3);
 
 console.log(element.outerHTML);
 
@@ -134,6 +134,37 @@ console.log(element.outerHTML);
 element.removeChild(p2);
 
 let para1 = p3.parentElement;
-console.log("Parent : ",para1);
+console.log("Parent : ", para1);
 
 para1.removeChild(p3);
+
+
+//* styling 
+//* using style attribute
+let doc = document.getElementById('last-span');
+console.log("doc : ", doc)
+doc.style.color = "red";
+doc.style.backgroundColor = "green";
+
+//* using css text
+doc.style.cssText="color:white ; background-color:black ; font-size:8em;"
+
+//* set sttribute
+doc.setAttribute('style',"color:Orange; background-color:black ; font-size:8em;");
+
+//* class Name
+doc.setAttribute('class',"first second third fourth");
+
+//* class list
+let classList = doc.classList;
+console.log("Class List : ",classList)
+
+let className = doc.className;
+console.log("Class Names : ",className);
+
+console.log("Type of Class Name : ",typeof(className));
+
+let classes = className.trim().split(' ');
+console.log(classes);
+
+
