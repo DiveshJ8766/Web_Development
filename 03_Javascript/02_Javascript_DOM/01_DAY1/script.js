@@ -84,4 +84,20 @@ e.textContent = "this is the bold text";
 
 console.log(newElement.outerHTML);
 
+//* Creating TextNode in two ways
+
+//* first way using createTextNode
+let para = document.createElement('p');
+let textNode = document.createTextNode("This is the text Node data");
+para.appendChild(textNode);
+parent.appendChild(para);
+
+console.log(parent);
+
+//* second way using textContent
+para = document.createElement('span');
+para.textContent = "Hello this is new text content";
+parent.appendChild(para);
+console.log(parent);
+
 
