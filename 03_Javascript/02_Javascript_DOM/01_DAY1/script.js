@@ -72,3 +72,16 @@ console.log("Outer Text : ",parent.outerHTML);
 
 //* TextContent
 console.log("Text Content : ",parent.textContent);
+
+//* Creating a Element
+let newElement = document.createElement('div');
+document.body.appendChild(newElement);
+
+newElement.innerHTML = '<p>Hello this is paragraph</p> <h2>Hello this is heading</h2> <b id="bold-text"></b>';
+
+let e = document.getElementById('bold-text');
+e.textContent = "this is the bold text";
+
+console.log(newElement.outerHTML);
+
+
