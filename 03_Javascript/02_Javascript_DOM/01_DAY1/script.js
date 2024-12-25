@@ -101,3 +101,31 @@ parent.appendChild(para);
 console.log(parent);
 
 
+//* Insert Adjacent Element
+let element = document.createElement('div');
+element.textContent = "this is new Div added to the Body";
+document.body.appendChild(element);
+
+let p = document.createElement('p');
+p.textContent = "hello this is paragraphy before begin";
+element.insertAdjacentElement('beforebegin',p);
+
+console.log(element.outerHTML);
+
+let p1 = document.createElement('p');
+p1.textContent = "hello this is paragraphy after begin"
+element.insertAdjacentElement('afterbegin',p1);
+
+console.log(element.outerHTML);
+
+let p2 = document.createElement('p');
+p2.textContent = "hello this is paragraphy before end"
+element.insertAdjacentElement('beforeend',p2);
+
+console.log(element.outerHTML);
+
+let p3 = document.createElement('p');
+p3.textContent = "hello this is paragraphy after end"
+element.insertAdjacentElement('afterend',p3);
+
+console.log(element.outerHTML);
