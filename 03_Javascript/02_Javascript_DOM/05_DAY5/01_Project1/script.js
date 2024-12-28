@@ -1,21 +1,20 @@
-let value = 0;
+// Getting the Element
+const valueElement = document.querySelector('#counter');
 
-let setValue = document.getElementById('value');
-setValue.textContent = value;
+// Incrementing the Value
+const increment = () =>{
 
-function incrementValue(){
-    console.log("Increment Function called!!!");
-    setValue.textContent = ++value;
+    // this is the value we can't make it as const
+    let counterValue = parseInt(valueElement.innerText);
+    counterValue = counterValue + 1;
+    valueElement.innerText = counterValue;
 }
 
-function decrementValue(){
-    console.log("Decrement Function called!!!");
-    setValue.textContent = --value;
+// Decrementing the Value
+const decrement = () =>{
+
+    // this is the value we can't make it as const
+    let counterValue = parseInt(valueElement.innerText);
+    counterValue = counterValue - 1;
+    valueElement.innerText = counterValue;
 }
-
-
-let incrementBtn = document.getElementById('increment-btn');
-incrementBtn.addEventListener('click',incrementValue);
-
-let decrementBtn = document.getElementById('decrement-btn');
-decrementBtn.addEventListener('click',decrementValue);
